@@ -1,0 +1,51 @@
+<!-- form handling -->
+<form
+  action="/api/guitars"
+  method="POST"
+  id="add_guitar"
+  class="d-flex justify-center"
+>
+  <div class="new_guitar d-flex flex-col align-center">
+    <div class="form-group">
+      <label for="guitar" class="text-light">Guitar</label>
+      <input type="hidden" name="id" value="">
+      <input type="text" name="guitar" value="" placeholder="Model" />
+    </div>
+    <div class="form-group">
+      <label for="brand" class="text-light">Brand</label>
+      <input type="text" name="brand" value="" placeholder="Guitar Brand" />
+    </div>
+    <div class="form-group">
+      <label for="radius" class="text-light">Radius</label>
+      <input type="text" name="radius" value="" placeholder="*.*" />
+    </div>
+    <div class="form-group">
+      <label for="price" class="text-light">Price</label>
+      <input type="text" name="price" value="" placeholder="$$$$" />
+    </div>
+    <div class="form-group">
+      <label for="isAwesome" class="text-light">isAwesome</label>
+      <div class="radio inline">
+        <input type="radio" id="radio-2" name="isAwesome" value="true">
+        <label for="radio-2" class="radio-label">True</label>
+      </div>
+      <div class="radio inline">
+        <input type="radio" id="radio-3" name="isAwesome" value="false">
+        <label for="radio-3" class="radio-label">Flase</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="year" class="text-light">Year</label>
+      <input type="text" name="year" value="" placeholder="YYYY-MM-DD" />
+    </div>
+
+    <div class="form-group">
+      <button
+        type="submit"
+        class="btn update text-light d-flex align-center transition"
+      >
+        <ion-icon name="save-outline"></ion-icon>Save
+      </button>
+    </div>
+  </div>
+</form>

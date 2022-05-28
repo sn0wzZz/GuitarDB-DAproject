@@ -1,0 +1,64 @@
+<!-- include header -->
+  <%- include('include/_header')%>
+<!-- include header -->
+
+<!-- main -->
+    <main id="site-main" >
+      <div class="container">
+        <div class="box-nav d-flex">
+          <a href="/" class="text-outlined d-flex align-center g-add transition"><ion-icon name="chevron-back-outline"></ion-icon>All guitars</a>
+        </div>
+        <div class="form-title d-flex flex-col align-center">
+          <h2 class="text-light">Update guitar</h1>
+          <span class="text-light m1rem">Use the below form to update an existing guitar</span>
+        </div>
+        
+        <!-- add guitar form -->
+        <form method="POST" id="update_guitar" class="d-flex justify-center">
+          <div class="new_guitar d-flex flex-col align-center">
+            <div class="form-group">
+              <label for="guitar" class="text-light">Guitar</label>
+              <input type="hidden" name="id" value="<%= guitar._id %>">
+              <input type="text" name="guitar" value="<%= guitar.guitar %>" placeholder="Model">
+            </div>
+            <div class="form-group">
+              <label for="brand" class="text-light">Brand</label>
+              <input type="text" name="brand" value="<%= guitar.brand %>" placeholder="Guitar Brand">
+            </div>
+            <div class="form-group">
+              <label for="radius" class="text-light">Radius</label>
+              <input type="text" name="radius" value="<%= guitar.radius.$numberDecimal %>" placeholder="*.*">
+            </div>
+            <div class="form-group">
+              <label for="price" class="text-light">Price</label>
+              <input type="text" name="price" value="<%= guitar.price %>" placeholder="$$$$">
+            </div>
+            <div class="form-group">
+              <label for="isAwesome" class="text-light">isAwesome</label>
+              <div class="radio inline">
+                <input type="radio" id="radio-2" name="isAwesome" value="true" <%= guitar.isAwesome == true ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">True</label>
+              </div>
+              <div class="radio inline">
+                <input type="radio" id="radio-3" name="isAwesome" value="false" <%= guitar.isAwesome == false ? 'checked' : '' %>>
+                <label for="radio-3" class="radio-label">Flase</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="year" class="text-light">Year</label>
+              <input type="text" name="year" value="<%= guitar.year %>" placeholder="YYYY-MM-DD">
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn update text-light d-flex align-center transition"><ion-icon name="reload-outline"></ion-icon>Update</button>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </main>
+  <!-- main -->
+
+<!-- include footer -->
+  <%- include('include/_footer')%>
+<!-- include footer -->

@@ -1,0 +1,23 @@
+<% for(let i=0; i<guitars.length; i++){ %>
+  <tr>
+    <td><%= i+1 %></td>
+    <td><%= guitars[i].guitar %></td>
+    <td><%= guitars[i].brand %></td>
+    <td><%= guitars[i].radius.$numberDecimal %></td>
+    <td>$<%= guitars[i].price %></td>
+    <td><%= guitars[i].isAwesome %></td>
+    <td><%= guitars[i].year %></td>
+    <td>
+      <a href="/update-guitar?id=<%= guitars[i]._id %>" class=" update inline d-flex">
+        <span class="text-outlined d-flex justify-center g-edi transition"
+          ><ion-icon name="create-outline"></ion-icon
+        ></span>
+      </a>
+      <a class="delete inline d-flex" data-id=<%= guitars[i]._id %>>
+        <span class="text-outlined d-flex justify-center g-del transition"
+          ><ion-icon name="trash-outline"></ion-icon
+        ></span>
+      </a>
+    </td>
+  </tr
+<% } %>

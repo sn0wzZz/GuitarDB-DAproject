@@ -1,0 +1,40 @@
+<!-- include header -->
+  <%- include('include/_header')%>
+<!-- include header -->
+
+  <!-- main -->
+    <main id="site-main" >
+      <div class="container">
+        <div class="box-nav d-flex justify-end">
+          <a href="/add-guitar" class="border-shadow">
+            <span class="text-outlined d-flex align-center g-add transition">New guitar <ion-icon name="add-circle-outline"></ion-icon></span>
+          </a>
+        </div>
+
+        <!-- form handling -->
+        <form action="/" method="post" class="d-flex justify-center">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th>ID</th>
+                <th>Guitar</th>
+                <th>Brand</th>
+                <th>Radius</th>
+                <th>Price</th>
+                <th>isAwasome</th>
+                <th>Year</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%- include('include/_show')%>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </main>
+  <!-- main -->
+
+<!-- include footer -->
+  <%- include('include/_footer')%>
+<!-- include footer -->
